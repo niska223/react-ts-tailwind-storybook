@@ -11,8 +11,7 @@ UI Components
 
 ---
 
-## 🚀 Assignment Overview
-Build two modern, reusable React components in 2 days using TypeScript and TailwindCSS. Document them with Storybook and structure the project for scalability.
+## 🚀 Overview
 
 ### Components
 
@@ -164,11 +163,6 @@ src/
 	- Ready for deployment and review.
 
 ---
-
-## 🙌 Author & Notes
-- Built for a front-end intern assignment.
-- Clean, scalable, and ready for review.
-- For any questions, contact the project author.
 
 ## Learn More
 
