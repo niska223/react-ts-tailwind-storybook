@@ -1,43 +1,174 @@
-# Getting Started with Create React App
+# 🎨 React Component Development Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Focus Area
+UI Components
 
-## Available Scripts
+## Tech Stack
+- React
+- TypeScript
+- TailwindCSS
+- Storybook
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Assignment Overview
+Build two modern, reusable React components in 2 days using TypeScript and TailwindCSS. Document them with Storybook and structure the project for scalability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### 1. InputField
+A flexible input component with:
+- Label, placeholder, helper text, error message
+- States: disabled, invalid, loading
+- Variants: filled, outlined, ghost
+- Sizes: small, medium, large
+- Optional: clear button, password toggle
+- Light & dark theme support
+- Accessible and responsive
 
-### `npm test`
+**Props:**
+```ts
+interface InputFieldProps {
+	value?: string;
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	label?: string;
+	placeholder?: string;
+	helperText?: string;
+	errorMessage?: string;
+	disabled?: boolean;
+	invalid?: boolean;
+	variant?: 'filled' | 'outlined' | 'ghost';
+	size?: 'sm' | 'md' | 'lg';
+}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 2. DataTable
+A data table with:
+- Tabular data display
+- Column sorting
+- Row selection (single)
+- Loading and empty states
+- Accessible and responsive
 
-### `npm run build`
+**Props:**
+```ts
+interface DataTableProps<T> {
+	data: T[];
+	columns: Column<T>[];
+	loading?: boolean;
+	selectable?: boolean;
+	onRowSelect?: (selectedRows: T[]) => void;
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+interface Column<T> {
+	key: string;
+	title: string;
+	dataIndex: keyof T;
+	sortable?: boolean;
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✅ Requirements Fulfilled
+- TypeScript with proper typing
+- Responsive design (TailwindCSS)
+- Accessibility (ARIA labels, keyboard navigation)
+- Clean, modern styling
+- Basic tests for both components
+- Storybook documentation
+- Example/demo usage
+- Scalable project structure
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📦 Project Structure
+```
+src/
+	components/
+		InputField/
+			InputField.tsx
+			InputField.stories.tsx
+			InputField.test.tsx
+			index.ts
+		DataTable/
+			DataTable.tsx
+			DataTable.stories.tsx
+			DataTable.test.tsx
+			index.ts
+	examples/
+		InputFieldDemo.tsx
+		DataTableDemo.tsx
+	App.tsx
+	AppNav.tsx
+	AppRoutes.tsx
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🛠️ Getting Started
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Install dependencies:**
+	 ```
+	 npm install
+	 ```
+2. **Start the app:**
+	 ```
+	 npm start
+	 ```
+	 - Visit [http://localhost:3000/input-demo](http://localhost:3000/input-demo) and [http://localhost:3000/table-demo](http://localhost:3000/table-demo)
+
+3. **Run Storybook:**
+	 ```
+	 npm run storybook
+	 ```
+	 - Visit [http://localhost:6006](http://localhost:6006)
+
+4. **Run tests:**
+	 ```
+	 npm test
+	 ```
+
+---
+
+## 📘 Storybook
+- All components are documented and demoed in Storybook.
+- See usage, props, and live examples.
+
+---
+
+## 🧠 Approach
+
+1. **Component-First Design:**
+	- Broke down requirements into two reusable, isolated components: InputField and DataTable.
+	- Used TypeScript interfaces for strong typing and future scalability.
+
+2. **Modern React Patterns:**
+	- Used functional components and hooks for state and logic.
+	- Ensured accessibility (ARIA, keyboard navigation) and responsiveness (TailwindCSS).
+
+3. **Styling & Theming:**
+	- Used TailwindCSS for rapid, consistent, and themeable UI development.
+	- Supported light/dark mode and interactive states.
+
+4. **Documentation & Testing:**
+	- Documented all components in Storybook with live examples and prop tables.
+	- Added basic unit tests for both components.
+
+5. **Project Structure:**
+	- Organized code for scalability: each component in its own folder with stories and tests.
+	- Added demo pages for real-world usage.
+
+6. **Delivery:**
+	- README includes setup, usage, and project overview.
+	- Ready for deployment and review.
+
+---
+
+## 🙌 Author & Notes
+- Built for a front-end intern assignment.
+- Clean, scalable, and ready for review.
+- For any questions, contact the project author.
 
 ## Learn More
 
