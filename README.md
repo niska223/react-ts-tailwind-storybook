@@ -1,4 +1,4 @@
-# 🎨 React Component Development Assignment
+# 🎨 React Component Development
 
 ## Focus Area
 UI Components
