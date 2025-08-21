@@ -130,6 +130,15 @@ src/
 
 ---
 
+## 🌐 Live Links
+
+React App (Vercel Deployment): https://react-ts-tailwind-storybook.vercel.app/
+
+Storybook Live: https://react-ts-tailwind-storybook.vercel.app/storybook/?path=/docs/components-datatable--docs
+
+Demo Video (Google Drive): https://drive.google.com/file/d/1uKbL14utgTHhY0hH0DJtqdXCBs4uqzHw/view?usp=sharing
+
+
 ## 📘 Storybook
 - All components are documented and demoed in Storybook.
 - See usage, props, and live examples.
