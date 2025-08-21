@@ -29,8 +29,8 @@
 
   "storybook": "storybook dev -p 6006",
   "build-storybook": "storybook build -o build/storybook",
-
   "build": "craco build && npm run build-storybook"
+
 }
 ,
   "eslintConfig": {
