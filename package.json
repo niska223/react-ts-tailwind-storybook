@@ -23,12 +23,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+  "start": "craco start",
+  "test": "craco test",
+  "eject": "react-scripts eject",
+
+  "storybook": "storybook dev -p 6006",
+  "build-storybook": "storybook build -o build/storybook",
+
+  "build": "craco build && npm run build-storybook"
   },
   "eslintConfig": {
     "extends": [
